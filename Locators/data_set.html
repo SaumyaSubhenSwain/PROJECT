@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Attribute Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 250px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User List</h2>
+
+    <!-- Creating data-id attribute -->
+    <div class="card" data-testid="101" data-name="Saumya" onclick="showData(this)">Click to view User 101</div>
+    <div class="card" data-testid="102" data-name="Subhen" onclick="showData(this)">Click to view User 102</div>
+    <div class="card" data-testid="103" data-name="Swain" onclick="showData(this)">Click to view User 103</div>
+
+    <p id="output"></p>
+
+    <script>
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(card => {
+            card.addEventListener("click", function() {
+
+                const userId = this.dataset.testid;
+                const userName = this.dataset.name;
+
+                document.getElementById("output").innerText =
+                    "Selected User ID: " + userId +
+                    " | Name: " + userName;
+            });
+        });
+    </script>
+
+</body>
+</html>
