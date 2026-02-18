@@ -7,3 +7,5 @@ with sync_playwright() as p:
 
     # open a link and hit in api and call the url
     page.goto("file:///D:/Project/TREENETRACLASSNOTES/TREENETRA_AT_22/playwright_prac/Locators/other_locators.html")
+
+    page.get_by_role("")
