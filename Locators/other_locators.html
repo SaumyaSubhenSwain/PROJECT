@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Playwright Locator Practice Page</title>
+    <title>Playwright Locator Practice</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,46 +37,36 @@
 
     <h1>Playwright Locator Practice Page</h1>
 
-    <!-- Buttons -->
-    <button id="submit-btn" data-testid="submit-btn">Submit</button>
-    <button id="cancel-btn" data-testid="cancel-btn">Cancel</button>
-
-    <div class="section">
-        <!-- Username -->
+    <!-- get_by_role -->
+    <button type="button">Submit</button>
+    <button type="button">Cancel</button>
+    <!-- get_by_label -->
+    <form>
         <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter Username">
-    </div>
+        <input id="username" type="text">
 
-    <div class="section">
-        <!-- Password -->
+        <br><br>
+
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter Password">
-    </div>
+        <input id="password" type="password">
+        <br><br>
+        <!-- get_by_placeholder -->
+        <input type="email" placeholder="Enter your email">
+        <input type="text" placeholder="Search here">
+        <br><br>
+        <!-- get_by_role with name -->
+        <button type="submit">Login</button>
+    </form>
 
-    <!-- Email & Search -->
-    <div class="section">
-        <input type="email" placeholder="Enter your email" data-testid="email-input">
-        <input type="text" placeholder="Search here" data-testid="search-input">
-    </div>
-
-    <!-- Login -->
-    <div class="section">
-        <button id="login-btn" data-testid="login-btn">Login</button>
-    </div>
-
-    <!-- Text Section -->
-    <div class="section">
-        <p>Welcome to Playwright automation practice</p>
-        <a href="https://playwright.dev" target="_blank">
-            Click here to learn Playwright
-        </a>
-    </div>
-
-    <!-- Checkbox -->
-    <div class="section">
-        <input type="checkbox" id="terms" name="terms">
-        <label for="terms">Accept Terms and Conditions</label>
-    </div>
-
-</body>
+    <br>
+    <!-- get_by_text -->
+    <p>Welcome to Playwright automation practice</p>
+    <span>Click here to learn Playwright</span>
+    <br><br>
+    <!-- Checkbox + label -->
+    <label>
+        <input type="checkbox">
+        " Accept Terms and Conditions "
+    </label>
+ </body>
 </html>
