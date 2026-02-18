@@ -6,4 +6,4 @@ with sync_playwright() as p:
     page = browser.new_page()   # open a new page/tab in ur recomended browser
 
     # open a link and hit in api and call the url
-    page.goto("")
+    page.goto("file:///D:/Project/TREENETRACLASSNOTES/TREENETRA_AT_22/playwright_prac/Locators/other_locators.html")
