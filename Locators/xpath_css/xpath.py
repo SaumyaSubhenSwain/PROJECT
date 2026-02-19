@@ -28,6 +28,11 @@ with sync_playwright() as p:
 
     #starts with :- matching some first characters
 
+
+    page.wait_for_selector("#loginBtn")
+    page.locator("loginBtn").click()
+    print(page.locator("#loginBtn").text_content())
+
     time.sleep(5)
 
     browser.close()
